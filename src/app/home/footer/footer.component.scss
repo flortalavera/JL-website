@@ -1,0 +1,20 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .social-media-img{
+        margin-bottom: 1rem;
+        
+        img:first-child{
+            margin-right: 1.8rem;
+        }
+    }
+
+    #copyright{
+        color: map-get(variables.$colors, 'brown' );
+    }
+}

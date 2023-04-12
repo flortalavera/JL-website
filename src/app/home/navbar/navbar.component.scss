@@ -1,3 +1,48 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+
 *{
     color: #ffff;
+}
+
+nav{
+    display: grid;
+    grid-template-areas: '1 2';
+
+    .logo-image{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        
+        img{
+            width: 20%;
+        }
+
+        h4{
+            display: inline;
+        }
+    }
+
+    .items-page{
+        display: flex;
+        align-items: center;
+
+        li{
+            display: inline-flex;
+            width: max-content;
+
+            ul{
+                padding: 0 3rem;
+                cursor: pointer;
+            }
+
+            ul:hover{
+                p{
+                    color: map-get(variables.$colors, 'brown-medium' );
+                }
+                
+            }
+        }
+    }
+
 }

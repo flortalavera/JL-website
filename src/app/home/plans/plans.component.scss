@@ -1,0 +1,31 @@
+@use '../../design-system/_reset';
+@use '../../design-system/_variables';
+
+*{
+    text-align: center;
+}
+
+h1{
+    color: #ffff;
+    margin: 2rem;
+}
+
+.plans-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .plan {
+        width: 20%;
+        background-color: #ffff;
+        text-align: center;
+        margin: 1rem;
+        padding: 2rem;
+        border-radius: 5%;
+
+        h2, p{
+            background-color: #ffff;
+            color: map-get(variables.$colors, 'brown' ) ;
+        }
+    }
+}
