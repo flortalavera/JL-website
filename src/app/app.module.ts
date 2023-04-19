@@ -13,6 +13,7 @@ import { PresentationComponent } from './home/presentation/presentation.componen
 import { PlansComponent } from './home/plans/plans.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ElPatioComponent } from './home/el-patio/el-patio.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     PresentationComponent,
     PlansComponent,
-    FooterComponent
+    FooterComponent,
+    ElPatioComponent
   ],
   imports: [
     BrowserModule,

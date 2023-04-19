@@ -1,0 +1,18 @@
+<h1>Descubre El Patio: Tu Lugar Ideal para Entrenar</h1>
+<div class="slider">
+    <div class="slider-content">
+        <div class="slider-images">
+            <img [src]="images[currentSlide]" alt="Image 1">
+            <img [src]="images[(currentSlide + 1) % images.length]" alt="Image 2">
+            <img [src]="images[(currentSlide + 2) % images.length]" alt="Image 3">
+            <img [src]="images[(currentSlide + 3) % images.length]" alt="Image 4">
+            <img [src]="images[(currentSlide + 4) % images.length]" alt="Image 5">
+            <img [src]="images[(currentSlide + 5) % images.length]" alt="Image 6">
+            <img [src]="images[(currentSlide + 6) % images.length]" alt="Image 7">
+        </div>        
+        <div class="slider-dots">
+            <span class="slider-dot" *ngFor="let image of images; let i = index" (click)="currentSlide = i"
+                [ngClass]="{ 'active': currentSlide === i }"></span>
+        </div>
+    </div>
+</div>

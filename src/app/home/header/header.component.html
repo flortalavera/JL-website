@@ -1,3 +1,7 @@
 <div class="slider-content">
-    <img src="../../../assets/images/frase 1.jpg" alt="">
+  <div class="video-thumbnail" [ngClass]="{ 'hide-controls': isVideoPlaying }">
+    <img src="../../../assets/images/video-miniature.png" alt="Video thumbnail">
+  </div>
+  <button class="play-button" (click)="playVideo()" [ngClass]="{ 'hide-controls': isVideoPlaying }">Ver video</button>
+  <video #myVideo src="../../../assets/videos/VIDEO-header.mp4" loop muted></video>
 </div>
