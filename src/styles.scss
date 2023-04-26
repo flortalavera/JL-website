@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -20,23 +19,27 @@ $JLpage-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$JLpage-theme: mat.define-light-theme((
-  color: (
-    primary: $JLpage-primary,
-    accent: $JLpage-accent,
-    warn: $JLpage-warn,
-  )
-));
+$JLpage-theme: mat.define-light-theme((color: (primary: $JLpage-primary,
+        accent: $JLpage-accent,
+        warn: $JLpage-warn,
+      )));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($JLpage-theme);
 
-*{
-    background-color: black;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
+* {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

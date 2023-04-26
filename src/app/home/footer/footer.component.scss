@@ -1,7 +1,12 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 
+*{
+    background-color: black;
+}
+
 .footer-content{
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;

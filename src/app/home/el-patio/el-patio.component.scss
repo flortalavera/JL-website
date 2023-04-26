@@ -12,13 +12,13 @@ h1{
 
 .slider {
     position: relative;
-    width: 100%;
-    max-width: 600px;
+    width: 80%;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    padding-bottom: 1rem;
 
     .slider-content {
         position: relative;
+        width: 100%;
     }
 
     .slider-images {
@@ -28,7 +28,9 @@ h1{
         img {
             flex: 1;
             margin-right: 1rem;
-            width: 100%;
+            width: 50%;
+            object-fit: cover;
+            object-position: center;
         }
     }
 

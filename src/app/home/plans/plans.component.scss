@@ -13,19 +13,30 @@ h1{
 .plans-content{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
     .plan {
-        width: 20%;
-        background-color: #ffff;
+        flex-basis: calc(24% - 10px);
+        background-image: url('../../../assets/images/wall-gray.jpg');
         text-align: center;
         margin: 1rem;
         padding: 2rem;
-        border-radius: 5%;
+        border-radius: 3%;
 
         h2, p{
-            background-color: #ffff;
-            color: map-get(variables.$colors, 'brown' ) ;
+            background: transparent;
+            color: map-get(variables.$colors, 'primary' ) ;
         }
+    }
+}
+
+@media (min-width: 768px) {
+    .plan {
+        flex-basis: calc(33.33% - 20px);
+    }
+
+    .plans-content {
+        justify-content: center;
     }
 }
