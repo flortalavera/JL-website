@@ -14,3 +14,15 @@
         border-radius: 50%;
     }
 }
+
+@media (max-width: 428px) {
+    .main-content-page{
+        width: 105%;
+    }
+}
+
+@media (max-width: 360px) {
+    .main-content-page{
+        width: 110%;
+    }
+}

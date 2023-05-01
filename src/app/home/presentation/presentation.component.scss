@@ -2,34 +2,34 @@
 @use '../../design-system/_variables';
 
 .who-is-juani {
-    display: grid;
-    grid-template-areas: 'img text';
-    color: #ffff;
-    margin: 3rem 0;
+  display: grid;
+  grid-template-areas: 'img text';
+  color: #ffff;
+  margin: 3rem 0;
 
-    .image-juani {
-        display: flex;
-        justify-content: center;
+  .image-juani {
+    display: flex;
+    justify-content: center;
 
-        img {
-            width: 70%;
-        }
-
+    img {
+      width: 70%;
     }
 
-    .presentation-text {
-        text-align: center;
-        width: 80%;
+  }
 
-        h1 {
-            margin: 1rem;
-        }
+  .presentation-text {
+    text-align: center;
+    width: 80%;
 
-        p {
-            font-size: map-get(variables.$font-sizes, 'text');
-        }
-
+    h1 {
+      margin: 1rem;
     }
+
+    p {
+      font-size: map-get(variables.$font-sizes, 'text');
+    }
+
+  }
 
 }
 
@@ -42,8 +42,54 @@
     transform: translateX(100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@media (max-width: 1124px) {
+  .who-is-juani {
+
+    .image-juani {
+
+      img {
+        width: 80%;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .who-is-juani {
+    display: block;
+
+    .image-juani {
+
+      img {
+        width: 50%;
+      }
+
+    }
+
+    .presentation-text {
+      width: 100%;
+      padding: 2rem 4rem;
+    }
+  }
+}
+
+@media (max-width: 563px) {
+  .who-is-juani {
+
+    .image-juani {
+
+      img {
+        width: 60%;
+      }
+
+    }
   }
 }

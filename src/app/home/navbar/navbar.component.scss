@@ -20,7 +20,7 @@ nav {
         align-items: center;
 
         img {
-            width: 20%;
+            width: 5rem;
         }
 
         h3 {
@@ -50,6 +50,25 @@ nav {
 
                 transition: background-color 0.3s ease-out;
             }
+        }
+    }
+
+    .menu-btn{
+        display: none;
+        border: none;
+    }
+
+}
+
+@media (max-width: 895px) {
+
+    nav{
+        .items-page{
+            display: none;
+        }
+
+        .menu-btn{
+            display: block;
         }
     }
 
