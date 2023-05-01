@@ -2,6 +2,8 @@
 @use '../../design-system/_variables';
 
 .slider-content {
+    margin-top: 6rem;
+
     .video-container {
         top: 0;
         left: 0;
@@ -12,6 +14,20 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .video-pause {
+            position: absolute;
+            right: 1rem;
+            margin-top: 0.5rem;
+            z-index: 2;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .video-pause:hover {
+            color: #e9e3e3;
         }
     }
 }

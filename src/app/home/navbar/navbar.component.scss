@@ -9,6 +9,10 @@
 nav{
     display: grid;
     grid-template-areas: '1 2';
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 
     .logo-image{
         width: 60%;

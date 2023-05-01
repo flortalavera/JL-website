@@ -1,7 +1,8 @@
 <div class="slider-content">
   <div class="video-container">
-    <video autoplay loop muted>
+    <video #video autoplay loop muted>
       <source src="../../../assets/videos/VIDEO-header.mp4" type="video/mp4">
     </video>
+    <button (click)="toggleVideo()" class="video-pause"><img src="{{ buttonImageSrc }}" alt="Botón de pausa"></button>
   </div>
 </div>

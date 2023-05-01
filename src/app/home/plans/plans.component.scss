@@ -1,16 +1,16 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 
-*{
+* {
     text-align: center;
 }
 
-h1{
+h1 {
     color: #ffff;
     margin: 2rem;
 }
 
-.plans-content{
+.plans-content {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -18,16 +18,43 @@ h1{
 
     .plan {
         flex-basis: calc(24% - 10px);
-        background-image: url('../../../assets/images/wall-gray.jpg');
+        background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), 
+            url('../../../assets/images/wall-gray.jpg');
         text-align: center;
         margin: 1rem;
         padding: 2rem;
         border-radius: 3%;
 
-        h2, p{
-            background: transparent;
-            color: map-get(variables.$colors, 'primary' ) ;
+        p {
+            font-size: map-get(variables.$font-sizes, 'text');
         }
+
+        h2,
+        p {
+            background: transparent;
+            display: inline;
+            color: map-get(variables.$colors, 'primary');
+        }
+
+        img{
+            margin-top: 1rem;
+        }
+
+        .get-plan-button{
+            font-size: map-get(variables.$font-sizes, 'text');
+            font-weight: 700;
+            color: #ffff;
+            padding: 0.6rem 2.3rem;
+            margin-top: 1rem;
+            border: none;
+            background-color: map-get(variables.$colors, 'gray');
+            border-radius: 2rem;
+        }
+
+        .get-plan-button:hover{
+            background-color: rgb(72, 68, 68);
+        }
+
     }
 }
 

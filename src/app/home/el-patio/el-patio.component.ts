@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-el-patio',
   templateUrl: './el-patio.component.html',
-  styleUrls: ['./el-patio.component.scss']
+  styleUrls: ['./el-patio.component.scss'],
+  providers: [NgbCarouselConfig]
 })
 export class ElPatioComponent {
   images = [
@@ -13,13 +15,23 @@ export class ElPatioComponent {
     "assets/images/el-patio/patio4.jpg",
     "assets/images/el-patio/patio5.jpg",
     "assets/images/el-patio/patio6.jpg",
-    "assets/images/el-patio/patio7.jpg"
+    "assets/images/el-patio/patio7.jpg",
+    "assets/images/el-patio/patio8.jpg",
+    "assets/images/el-patio/patio9.jpg",
+    "assets/images/el-patio/patio10.jpg",
   ];
 
-  currentSlide = 0;
+  selectedImage: string = '';
+  showModal: boolean = false;
 
-  changeSlide(index: number) {
-    this.currentSlide = index;
+  openImageModal(img: string) {
+    this.selectedImage = img;
+    this.showModal = true;
+  }
+
+  closeImageModal() {
+    this.showModal = false;
   }
 
 }
+

@@ -7,17 +7,23 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class HeaderComponent {
 
-  @ViewChild('myVideo') myVideo!: ElementRef<HTMLVideoElement>;
-  isVideoPlaying = false;
+  @ViewChild('video', { static: true }) videoElement!: ElementRef;
 
-  playVideo() {
-    this.myVideo.nativeElement.play();
-    this.isVideoPlaying = true;
-  }
+  isPlaying = true;
+  buttonImageSrc = '../../../assets/icons/pausa.png';
 
-  pauseVideo() {
-    this.myVideo.nativeElement.pause();
-    this.isVideoPlaying = false;
-  }
+  toggleVideo() {
+    if (this.videoElement) {
+      if (this.videoElement.nativeElement.paused) {
+        this.videoElement.nativeElement.play();
+        this.isPlaying = true;
+        this.buttonImageSrc = '../../../assets/icons/pausa.png';
+      } else {
+        this.videoElement.nativeElement.pause();
+        this.isPlaying = false;
+        this.buttonImageSrc = '../../../assets/icons/play.png';
+      }
+    }
+  }  
 
 }

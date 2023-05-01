@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-/* Angular Material */
+/* Angular Material and other libreries */
 import { MatCardModule } from '@angular/material/card';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +32,9 @@ import { ElPatioComponent } from './home/el-patio/el-patio.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    NgbCarouselModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
