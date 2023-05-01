@@ -16,11 +16,10 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
 
-    .plan {
+    .plan, .payment-methods {
         flex-basis: calc(24% - 10px);
         background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), 
             url('../../../assets/images/wall-gray.jpg');
-        text-align: center;
         margin: 1rem;
         padding: 2rem;
         border-radius: 3%;
@@ -49,12 +48,41 @@ h1 {
             border: none;
             background-color: map-get(variables.$colors, 'gray');
             border-radius: 2rem;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
         }
-
+        
         .get-plan-button:hover{
             background-color: rgb(72, 68, 68);
+            opacity: 0.9;
+        }        
+
+    }
+
+    .payment-methods{
+        background: transparent;
+        padding: 2rem 0 0 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2{
+            color: #ffff;
+            font-size: map-get(variables.$font-sizes, 'subtitle');
         }
 
+        .item-method{
+            display: flex;
+            align-items: flex-end;
+
+            p{
+                color: #ffff;
+                margin-left: 0.5rem;
+            }
+
+            .mp-image{
+                width: 2.5rem;
+            }
+        }
     }
 }
 

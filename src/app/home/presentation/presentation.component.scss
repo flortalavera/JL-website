@@ -1,35 +1,49 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 
-
-.who-is-juani{
+.who-is-juani {
     display: grid;
     grid-template-areas: 'img text';
     color: #ffff;
     margin: 3rem 0;
 
-    .image-juani{
+    .image-juani {
         display: flex;
         justify-content: center;
 
-        img{
+        img {
             width: 70%;
         }
 
     }
 
-    .presentation-text{
+    .presentation-text {
         text-align: center;
         width: 80%;
 
-        h1{
+        h1 {
             margin: 1rem;
         }
 
-        p{
+        p {
             font-size: map-get(variables.$font-sizes, 'text');
         }
 
     }
 
+}
+
+.animate {
+  animation: slide-in-left 1.8s ease-out;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

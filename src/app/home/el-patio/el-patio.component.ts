@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-el-patio',
   templateUrl: './el-patio.component.html',
   styleUrls: ['./el-patio.component.scss'],
-  providers: [NgbCarouselConfig]
+  animations: [
+    trigger('fadeInOut', [
+      state('void', style({
+        opacity: 0
+      })),
+      transition('void <=> *', animate(300)),
+    ]),
+  ]
 })
+
 export class ElPatioComponent {
   images = [
     "assets/images/el-patio/patio1.jpg",

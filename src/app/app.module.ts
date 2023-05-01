@@ -16,6 +16,7 @@ import { PlansComponent } from './home/plans/plans.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ElPatioComponent } from './home/el-patio/el-patio.component';
+import { SupportComponent } from './home/support/support.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ElPatioComponent } from './home/el-patio/el-patio.component';
     PresentationComponent,
     PlansComponent,
     FooterComponent,
-    ElPatioComponent
+    ElPatioComponent,
+    SupportComponent
   ],
   imports: [
     BrowserModule,
