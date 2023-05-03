@@ -13,7 +13,7 @@
 
     .social-media-img{
         margin-bottom: 1rem;
-        
+
         img:first-child{
             margin-right: 1.8rem;
         }
@@ -21,5 +21,19 @@
 
     #copyright{
         color: map-get(variables.$colors, 'brown' );
+    }
+}
+
+@media (max-width: 429px) {
+    .footer-content{
+        width: 110%;
+    }
+}
+
+@media (max-width: 365px) {
+    .footer-content{
+        #copyright{
+            padding: 0 2rem;
+        }
     }
 }

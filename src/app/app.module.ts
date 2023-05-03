@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatCardModule } from '@angular/material/card';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +37,8 @@ import { SupportComponent } from './home/support/support.component';
     BrowserAnimationsModule,
     MatCardModule,
     NgbCarouselModule,
-    NgbModule
+    NgbModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

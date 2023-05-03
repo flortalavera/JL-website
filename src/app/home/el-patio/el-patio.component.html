@@ -2,13 +2,13 @@
 
 <div class="image-grid">
     <div class="image-container" *ngFor="let img of images" (click)="openImageModal(img)">
-        <img [src]="img" alt="image">
+        <img [src]="img" alt="imagenes del lugar de entrenamiento en CABA">
     </div>
 </div>
 
 <div class="image-modal active" [class.active]="showModal">
     <div class="modal-background" (click)="closeImageModal()"></div>
     <div class="modal-content">
-        <img [src]="selectedImage" alt="modal image">
+        <img [src]="selectedImage" alt="modal de la imagen seleccionada del patio">
     </div>
 </div>

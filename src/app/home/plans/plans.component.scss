@@ -87,8 +87,73 @@ h1 {
     }
 }
 
+@media (max-width: 1439px) {
+
+    .plans-content {
+        .payment-methods{
+            padding: 0;
+
+            h2{
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media (max-width: 1239px) {
+
+    .plans-content {
+        .payment-methods{
+            h2{
+                text-align: center;
+            }
+
+            .item-method{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 828px) {
+    .plans-content{
+        .plan, .payment-methods{
+            flex-basis: calc(40% - 10px);
+        }
+    }
+    
+}
+
+@media (max-width: 553px) {
+    .plans-content{
+        .plan, .payment-methods{
+            flex-basis: calc(60% - 10px);
+        }
+    }
+    
+}
+
+@media (max-width: 458px) {
+    .plans-content{
+        .plan, .payment-methods{
+            flex-basis: calc(70% - 10px);
+        }
+    }
+    
+}
+
+@media (max-width: 374px) {
+    .plans-content{
+        .plan, .payment-methods{
+            flex-basis: calc(80% - 10px);
+        }
+    }
+    
+}
+
 @media (min-width: 768px) {
-    .plan {
+    .plan, .payment-methods {
         flex-basis: calc(33.33% - 20px);
     }
 

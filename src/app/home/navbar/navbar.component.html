@@ -3,7 +3,13 @@
         <img src="../../../assets/images/LOGO JUANI.png" alt="LOGO JL ENTRENAMIENTOS">
         <h3 (click)="reloadHome()">JL Entrenamientos</h3>
     </div>
-    <button class="menu-btn" (click)="toggleMenu()">☰</button>
+    <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" (click)="showMenuItems()">☰</button>
+    <mat-menu #menu="matMenu" class="menu-item">
+        <a mat-menu-item href="#about-me">QUIEN SOY</a>
+        <a mat-menu-item href="#plans">PLANES</a>
+        <a mat-menu-item href="#el-patio">EL PATIO</a>
+        <a mat-menu-item href="#contact-me">CONTACTAME</a>
+    </mat-menu>
     <div class="items-page">
         <li>
             <ul>

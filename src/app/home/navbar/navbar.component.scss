@@ -53,7 +53,7 @@ nav {
         }
     }
 
-    .menu-btn{
+    .menu-btn {
         display: none;
         border: none;
     }
@@ -62,14 +62,19 @@ nav {
 
 @media (max-width: 895px) {
 
-    nav{
-        .items-page{
+    nav {
+        justify-content: space-between;
+
+        .items-page {
             display: none;
         }
 
-        .menu-btn{
+        .menu-btn {
+            width: max-content;
             display: block;
+            padding-right: 1.8rem;
         }
     }
+
 
 }

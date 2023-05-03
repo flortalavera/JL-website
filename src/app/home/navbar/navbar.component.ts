@@ -6,14 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  showMenu = false;
+  showItemsPage = false;
+  public menu: any;
   
   reloadHome(){
     window.location.reload();
   }
 
-  toggleMenu() {
-    this.showMenu = !this.showMenu;
+  showMenuItems(){
+    this.showItemsPage = true;
   }
 
 }
