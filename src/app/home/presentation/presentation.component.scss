@@ -5,28 +5,38 @@
   display: grid;
   grid-template-areas: 'img text';
   color: #ffff;
-  margin: 3rem 0;
+  margin: 3rem 5rem;
 
   .image-juani {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
     img {
-      width: 70%;
+      width: 90%;
     }
 
   }
 
   .presentation-text {
-    text-align: center;
-    width: 80%;
+    width: 100%;
 
     h1 {
+      text-align: center;
       margin: 1rem;
     }
 
+    .other-center{
+      text-align: center;
+    }
+
+    .bold-text{
+      font-weight: bold;
+      display: inline;
+    }
+
     p {
-      font-size: map-get(variables.$font-sizes, 'text');
+      line-height: 1.5;
+      font-size: map-get(variables.$font-sizes, 'subtext');
     }
 
   }

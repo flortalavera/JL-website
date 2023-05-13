@@ -38,7 +38,7 @@ import { SupportComponent } from './home/support/support.component';
     MatCardModule,
     NgbCarouselModule,
     NgbModule,
-    MatMenuModule
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

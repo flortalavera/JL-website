@@ -13,17 +13,33 @@
     <div class="items-page">
         <li>
             <ul>
-                <a href="#about-me"><p>QUIEN SOY</p></a>
+                <a href="#about-me">
+                    <p>QUIEN SOY</p>
+                </a>
             </ul>
             <ul>
-                <a href="#plans"><p>PLANES</p></a>
+                <a href="#plans">
+                    <p>PLANES</p>
+                </a>
             </ul>
             <ul>
-                <a href="#el-patio"><p>EL PATIO</p></a>
+                <a href="#el-patio">
+                    <p>EL PATIO</p>
+                </a>
             </ul>
             <ul>
-                <a href="#contact-me"><p>CONTACTAME</p></a>
+                <a href="#contact-me">
+                    <p>CONTACTAME</p>
+                </a>
             </ul>
+            <div class="language">
+                <a href="#" (click)="changeLanguage('es')">
+                    <img title="Español" src="../../../assets/icons/languages/espana.png" alt="Bandera Espania">
+                </a>
+                <a href="#" (click)="changeLanguage('en')">
+                    <img title="English" src="../../../assets/icons/languages/reino-unido.png" alt="Bandera Inglaterra">
+                </a>
+            </div>
         </li>
     </div>
 </nav>
