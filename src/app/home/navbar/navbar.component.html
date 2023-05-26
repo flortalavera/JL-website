@@ -5,21 +5,21 @@
     </div>
     <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" (click)="showMenuItems()">☰</button>
     <mat-menu #menu="matMenu" class="menu-item">
-        <a mat-menu-item href="#about-me">QUIEN SOY</a>
-        <a mat-menu-item href="#plans">PLANES</a>
+        <a mat-menu-item href="#about-me">{{ navbarItems[0] }}</a>
+        <a mat-menu-item href="#plans">{{ navbarItems[1] }}</a>
         <a mat-menu-item href="#el-patio">EL PATIO</a>
-        <a mat-menu-item href="#contact-me">CONTACTAME</a>
+        <a mat-menu-item href="#contact-me">{{ navbarItems[2] }}</a>
     </mat-menu>
     <div class="items-page">
         <li>
             <ul>
                 <a href="#about-me">
-                    <p>QUIEN SOY</p>
+                    <p>{{ navbarItems[0] }}</p>
                 </a>
             </ul>
             <ul>
                 <a href="#plans">
-                    <p>PLANES</p>
+                    <p>{{ navbarItems[1] }}</p>
                 </a>
             </ul>
             <ul>
@@ -29,7 +29,7 @@
             </ul>
             <ul>
                 <a href="#contact-me">
-                    <p>CONTACTAME</p>
+                    <p>{{ navbarItems[2] }}</p>
                 </a>
             </ul>
             <div class="language">

@@ -1,0 +1,19 @@
+{
+    "navbarItems": [
+        "QUIEN SOY",
+        "PLANES",
+        "CONTACTAME"
+    ],
+    "presentation": {
+        "greeting": "Hola! Soy Juani Lagreca Preparador físico y entrenador",
+        "first-text": "Cuento con más de 10 años de experiencia y mi objetivo es ayudarte a alcanzar tus objetivos de manera efectiva y sostenible, brindándote un enfoque personalizado y resultados tangibles. ¿Qué te ofrece mi enfoque de entrenamiento?",
+        "items": ["Experiencia comprobada", "Planes personalizados", "Atención individualizada", "Resultados garantizados"],
+        "items-text": {
+            "1": "Con más de una década dedicada al entrenamiento físico, tengo el conocimiento y la experiencia necesarios para guiar tu camino hacia el éxito.",
+            "2": "Entiendo que cada individuo es único, por lo que diseño planes de entrenamiento adaptados a tus necesidades y objetivos específicos.",
+            "3": "Mi enfoque se centra en vos en cada sesión. Mi objetivo es brindarte el apoyo y la orientación necesarios para superar obstáculos y maximizar tus resultados.",
+            "4": "Mi compromiso es ayudarte a lograr los resultados que deseas. Trabajaremos juntos, marcando hitos alcanzables y midiendo tu progreso en el camino."
+        },
+        "last-text": "Ya sea que busques perder peso, ganar fuerza, mejorar tu condición física general o alcanzar cualquier otro objetivo relacionado con el bienestar, estoy acá para guiarte en cada paso del camino. ¡No esperes más para transformar tu vida! Contáctame hoy mismo y juntos lograremos que alcances tus objetivos de forma efectiva y duradera."
+    }
+}

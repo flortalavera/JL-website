@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 /* Angular Material and other libreries */
 import { MatCardModule } from '@angular/material/card';
@@ -39,6 +40,7 @@ import { SupportComponent } from './home/support/support.component';
     NgbCarouselModule,
     NgbModule,
     MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

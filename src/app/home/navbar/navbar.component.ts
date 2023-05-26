@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { LanguageService } from 'src/app/common-services/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +9,15 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   showItemsPage = false;
   public menu: any;
+  navbarItems: string[] = [];
+
+  constructor(private languageService: LanguageService) { }
+
+  ngOnInit() {
+    this.languageService.setLanguage('es').subscribe(data => {
+      this.navbarItems = data.navbarItems;
+    });
+  }
   
   reloadHome(){
     window.location.reload();
@@ -19,7 +28,9 @@ export class NavbarComponent {
   }
 
   changeLanguage(language: string): void {
-    console.log(language)
+    this.languageService.setLanguage(language).subscribe(data => {
+      this.navbarItems = data.navbarItems;
+    });
   }
 
 }

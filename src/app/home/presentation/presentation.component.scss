@@ -4,6 +4,7 @@
 .who-is-juani {
   display: grid;
   grid-template-areas: 'img text';
+  gap: 2rem;
   color: #ffff;
   margin: 3rem 5rem;
 
@@ -12,7 +13,7 @@
     justify-content: space-around;
 
     img {
-      width: 90%;
+      width: 100%;
     }
 
   }
