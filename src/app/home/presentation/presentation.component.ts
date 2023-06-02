@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
+import { LanguageService } from 'src/app/common-services/language.service';
 
 @Component({
   selector: 'app-presentation',
@@ -7,8 +8,18 @@ import { Component, ElementRef, HostListener } from '@angular/core';
 })
 export class PresentationComponent {
   isAnimated = false;
+  presentation: any;
+  greeting: string = '';
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef,
+    private languageService: LanguageService) { }
+
+    ngOnInit() {
+      this.languageService.setLanguage('es').subscribe(data => {
+        this.presentation = data.presentation;
+        console.log(this.presentation.greeting)
+      });
+    }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {

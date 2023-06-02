@@ -4,14 +4,11 @@
             alt="descripcion de trayectoria de juani lagreca preparador fisico en Buenos Aires">
     </div>
     <div class="presentation-text">
-        <h1>Hola! Soy Juani Lagreca<br> Preparador físico y entrenador</h1>
+        <h1>{{ presentation?.greeting }}</h1>
         <div class="other-center">
-            <p>
-                Cuento con más de 10 años de experiencia y mi objetivo es ayudarte a alcanzar tus objetivos de manera
-                efectiva y sostenible, brindándote un enfoque personalizado y resultados tangibles.<br>
-                ¿Qué te ofrece mi enfoque de entrenamiento?</p><br>
+            <p>{{ presentation?.firstText }}</p><br>
         </div>
-        <p class="bold-text"><img src="../../../assets/icons/flecha.png" alt="alcanzar objetivos"> Experiencia
+        <p class="bold-text" ><img src="../../../assets/icons/flecha.png" alt="alcanzar objetivos"> Experiencia
             comprobada:</p>
         <p> Con más de una
             década dedicada al entrenamiento físico, tengo el conocimiento y la experiencia necesarios para guiar tu
@@ -31,9 +28,6 @@
         <p> Mi compromiso
             es ayudarte a lograr los resultados que deseas. Trabajaremos juntos, marcando hitos alcanzables y midiendo
             tu progreso en el camino.</p><br>
-            <p>Ya sea que busques perder peso, ganar fuerza, mejorar tu condición física general o alcanzar cualquier otro
-            objetivo relacionado con el bienestar, estoy acá para guiarte en cada paso del camino.
-            ¡No esperes más para transformar tu vida! Contáctame hoy mismo y juntos lograremos que alcances tus
-            objetivos de forma efectiva y duradera.</p>
+            <p>{{ presentation?.lastText }}</p>
     </div>
 </div>
