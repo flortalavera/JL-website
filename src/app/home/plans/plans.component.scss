@@ -1,11 +1,16 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 
+@font-face {
+    font-family: 'Rustic Printed Stamp';
+    src: url('../../../assets/fonts/FontsFree-Net-Rustic-Printed-Stamp.ttf') format('truetype');
+}
 
 h1 {
     color: #ffff;
     margin: 2rem;
     text-align: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .plans-content {
@@ -15,18 +20,24 @@ h1 {
     justify-content: center;
     text-align: center;
 
-    .plan, .payment-methods {
-        position: relative; /* Agregado */
+    .plan,
+    .payment-methods {
+        position: relative;
         flex-basis: calc(24% - 10px);
-        background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), 
+        background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
             url('../../../assets/images/wall-gray.jpg');
         margin: 1rem;
         padding: 2rem;
         border-radius: 3%;
         display: grid;
 
+        h2{
+            font-family: 'Rustic Printed Stamp', sans-serif;
+            font-size: map-get(variables.$font-sizes, 'subtitle');
+        }
+
         p {
-            font-size: map-get(variables.$font-sizes, 'text');
+            font-size: map-get(variables.$font-sizes, 'subtext');
         }
 
         h2,
@@ -36,24 +47,29 @@ h1 {
             color: map-get(variables.$colors, 'primary');
         }
 
-        img{
+        img {
             margin-top: 1rem;
         }
 
-        .item-plan{
+        .item-plan {
             text-align: left;
+
+            img {
+                width: 1.2rem;
+                margin-right: 0.5rem;
+            }
         }
 
-        .get-plan-button{
+        .get-plan-button {
             width: 80%;
-            position: absolute; /* Agregado */
-            left: 50%; /* Agregado */
-            transform: translateX(-50%); /* Agregado */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             font-size: map-get(variables.$font-sizes, 'text');
             font-weight: 700;
             color: #ffff;
             padding: 0.6rem 2.3rem;
-            margin-bottom: 1rem; /* Agregado */
+            margin-bottom: 1rem;
             height: 3rem;
             bottom: 0;
             border: none;
@@ -62,36 +78,36 @@ h1 {
             transition: background-color 0.3s ease, opacity 0.3s ease;
             bottom: 0;
         }
-        
-        .get-plan-button:hover{
+
+        .get-plan-button:hover {
             background-color: rgb(72, 68, 68);
             opacity: 0.9;
         }
 
     }
 
-    .payment-methods{
+    .payment-methods {
         background: transparent;
         padding: 2rem 0 0 3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        h2{
+        h2 {
             color: #ffff;
             font-size: map-get(variables.$font-sizes, 'subtitle');
         }
 
-        .item-method{
+        .item-method {
             display: flex;
             align-items: flex-end;
 
-            p{
+            p {
                 color: #ffff;
                 margin-left: 0.5rem;
             }
 
-            .mp-image{
+            .mp-image {
                 width: 2.5rem;
             }
         }
@@ -101,10 +117,10 @@ h1 {
 @media (max-width: 1439px) {
 
     .plans-content {
-        .payment-methods{
+        .payment-methods {
             padding: 0;
 
-            h2{
+            h2 {
                 text-align: left;
             }
         }
@@ -114,12 +130,12 @@ h1 {
 @media (max-width: 1239px) {
 
     .plans-content {
-        .payment-methods{
-            h2{
+        .payment-methods {
+            h2 {
                 text-align: center;
             }
 
-            .item-method{
+            .item-method {
                 flex-direction: column;
                 align-items: center;
             }
@@ -128,43 +144,53 @@ h1 {
 }
 
 @media (max-width: 828px) {
-    .plans-content{
-        .plan, .payment-methods{
+    .plans-content {
+
+        .plan,
+        .payment-methods {
             flex-basis: calc(40% - 10px);
         }
     }
-    
+
 }
 
 @media (max-width: 553px) {
-    .plans-content{
-        .plan, .payment-methods{
+    .plans-content {
+
+        .plan,
+        .payment-methods {
             flex-basis: calc(60% - 10px);
         }
     }
-    
+
 }
 
 @media (max-width: 458px) {
-    .plans-content{
-        .plan, .payment-methods{
+    .plans-content {
+
+        .plan,
+        .payment-methods {
             flex-basis: calc(70% - 10px);
         }
     }
-    
+
 }
 
 @media (max-width: 374px) {
-    .plans-content{
-        .plan, .payment-methods{
+    .plans-content {
+
+        .plan,
+        .payment-methods {
             flex-basis: calc(80% - 10px);
         }
     }
-    
+
 }
 
 @media (min-width: 768px) {
-    .plan, .payment-methods {
+
+    .plan,
+    .payment-methods {
         flex-basis: calc(33.33% - 20px);
     }
 

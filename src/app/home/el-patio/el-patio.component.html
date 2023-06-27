@@ -1,14 +1,29 @@
 <h1>Descubre El Patio: Tu Lugar Ideal para Entrenar</h1>
-
-<div class="image-grid">
-    <div class="image-container" *ngFor="let img of images" (click)="openImageModal(img)">
-        <img [src]="img" alt="imagenes del lugar de entrenamiento en CABA">
+<div class="main-content-el-patio">
+    <div class="el-patio-video">
+        <div class="action-buttons">
+            <button (click)="toggleVideo()"><img src="{{ buttonImageSrc }}" alt="pausar o poner play a video de presentacion"></button>
+        </div>
+        <video #video loop muted poster="../../../assets/images/el-patio/video.jpg">
+            <source src="../../../assets/videos/gym.mp4" type="video/mp4">
+        </video>
     </div>
-</div>
-
-<div class="image-modal active" [class.active]="showModal">
-    <div class="modal-background" (click)="closeImageModal()"></div>
-    <div class="modal-content">
-        <img [src]="selectedImage" alt="modal de la imagen seleccionada del patio">
+    <div class="slider-image">
+        <div class="slider-image-content">
+            <div class="carousel-nav-left" (click)="previous()" [ngClass]="{ 'disabled': currentIndex === 0 }">
+                <div class="arrow-left"></div>
+            </div>
+            <div class="carousel-container">
+                <ng-container *ngFor="let palette of visiblePalettes; let i = index">
+                    <div class="palette" [class.active]="currentIndex === i">
+                        <img [src]="palette.image" [alt]="palette.title">
+                    </div>
+                </ng-container>
+            </div>
+            <div class="carousel-nav-right" [ngClass]="{ 'disabled': currentIndex === palettes.length - 1 }"
+                (click)="next()">
+                <div class="arrow-right"></div>
+            </div>
+        </div>
     </div>
 </div>

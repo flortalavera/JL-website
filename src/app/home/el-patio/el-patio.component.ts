@@ -1,44 +1,73 @@
-import { Component } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-el-patio',
   templateUrl: './el-patio.component.html',
   styleUrls: ['./el-patio.component.scss'],
-  animations: [
-    trigger('fadeInOut', [
-      state('void', style({
-        opacity: 0
-      })),
-      transition('void <=> *', animate(300)),
-    ]),
-  ]
 })
 
 export class ElPatioComponent {
-  images = [
-    "assets/images/el-patio/patio1.jpg",
-    "assets/images/el-patio/patio2.jpg",
-    "assets/images/el-patio/patio3.jpg",
-    "assets/images/el-patio/patio4.jpg",
-    "assets/images/el-patio/patio5.jpg",
-    "assets/images/el-patio/patio6.jpg",
-    "assets/images/el-patio/patio7.jpg",
-    "assets/images/el-patio/patio8.jpg",
-    "assets/images/el-patio/patio9.jpg",
-    "assets/images/el-patio/patio10.jpg",
-  ];
+  palettes: any[] = [];
+  currentIndex: number = 0;
+  visiblePalettes: any[] = [];
+  
+  @ViewChild('video', { static: true }) videoElement!: ElementRef;
 
-  selectedImage: string = '';
-  showModal: boolean = false;
+  ngOnInit() {
 
-  openImageModal(img: string) {
-    this.selectedImage = img;
-    this.showModal = true;
+    this.palettes = [
+      { image: "assets/images/el-patio/patio9.jpg" },
+      { image: "assets/images/el-patio/patio2.jpg" },
+      { image: "assets/images/el-patio/patio3.jpg" },
+      { image: "assets/images/el-patio/patio4.jpg" },
+      { image: "assets/images/el-patio/patio5.jpg" },
+      { image: "assets/images/el-patio/patio6.jpg" },
+      { image: "assets/images/el-patio/patio7.jpg" },
+      { image: "assets/images/el-patio/patio8.jpg" },
+      { image: "assets/images/el-patio/patio1.jpg" },
+      { image: "assets/images/el-patio/patio10.jpg" },
+
+    ];
+
+    this.updateVisiblePalettes();
   }
 
-  closeImageModal() {
-    this.showModal = false;
+  previous() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.updateVisiblePalettes();
+    }
   }
+
+  next() {
+    if (this.currentIndex < this.palettes.length - 1) {
+      this.currentIndex++;
+      this.updateVisiblePalettes();
+    }
+  }
+
+  updateVisiblePalettes() {
+    const start = this.currentIndex;
+    const end = start + 1;
+    this.visiblePalettes = this.palettes.slice(start, end);
+  }
+
+  isPlaying = true;
+  buttonImageSrc = '../../../assets/icons/play.png';
+
+  toggleVideo() {
+    if (this.videoElement) {
+      if (this.videoElement.nativeElement.paused) {
+        this.videoElement.nativeElement.play();
+        this.isPlaying = true;
+        this.buttonImageSrc = '../../../assets/icons/pausa.png';
+      } else {
+        this.videoElement.nativeElement.pause();
+        this.isPlaying = false;
+        this.buttonImageSrc = '../../../assets/icons/play.png';
+      }
+    }
+  }  
+
 
 }
