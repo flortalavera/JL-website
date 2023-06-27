@@ -22,14 +22,12 @@ h1 {
 
     .plan,
     .payment-methods {
-        position: relative;
         flex-basis: calc(24% - 10px);
         background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
             url('../../../assets/images/wall-gray.jpg');
         margin: 1rem;
         padding: 2rem;
         border-radius: 3%;
-        display: grid;
 
         h2{
             font-family: 'Rustic Printed Stamp', sans-serif;
@@ -62,28 +60,40 @@ h1 {
 
         .get-plan-button {
             width: 80%;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
             font-size: map-get(variables.$font-sizes, 'text');
             font-weight: 700;
-            color: #ffff;
             padding: 0.6rem 2.3rem;
-            margin-bottom: 1rem;
+            margin: 1rem 0;
             height: 3rem;
-            bottom: 0;
-            border: none;
-            background-color: map-get(variables.$colors, 'gray');
-            border-radius: 2rem;
+            background-color: #ffffff96;
+            border-radius: 1rem;
+            border: solid 1.5px map-get(variables.$colors, 'brown-light');
             transition: background-color 0.3s ease, opacity 0.3s ease;
-            bottom: 0;
+            box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
+
+            a{
+                color: rgb(63, 62, 62);
+                font-family: 'Barlow Semi Condensed', sans-serif;
+            }
         }
 
         .get-plan-button:hover {
             background-color: rgb(72, 68, 68);
             opacity: 0.9;
+            border: solid 1.5px #ffff;
+            
+            a{
+                color: #ffff;
+            }
         }
 
+    }
+
+    .plan{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 26rem;
     }
 
     .payment-methods {

@@ -23,7 +23,7 @@ export class PresentationComponent {
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    const element = this.el.nativeElement.querySelector('.who-is-juani');
+    const element = this.el.nativeElement.querySelector('.presentation-text');
     const rect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
