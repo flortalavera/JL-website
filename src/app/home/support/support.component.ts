@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
+import { LanguageService } from 'src/app/common-services/language.service';
 
 @Component({
   selector: 'app-support',
@@ -7,11 +8,18 @@ import { Component, ElementRef, HostListener } from '@angular/core';
 })
 export class SupportComponent {
   elementToAnimate: any;
+  pillars: any;
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef,
+    private languageService: LanguageService) { }
 
   ngOnInit() {
     this.elementToAnimate = this.el.nativeElement.querySelector('.icons-section');
+    this.languageService.getData().subscribe((data) => {
+      if (data) {
+        this.pillars = data.pillars;
+      }
+    });
   }
 
   @HostListener('window:scroll', ['$event'])

@@ -6,7 +6,8 @@
     ],
     "presentation": {
         "greeting": "Hello! I'm Juani Lagreca, a physical trainer and coach",
-        "firstText": "With over 10 years of experience, my goal is to help you achieve your goals effectively and sustainably by providing a personalized approach and tangible results. What does my training approach offer you?",
+        "firstText": "I have over 10 years of experience, and my goal is to help you achieve your objectives effectively and sustainably by providing a personalized approach and tangible results.",
+        "question": "What does my training approach offer you?",
         "items": [
             "Proven experience",
             "Customized plans",
@@ -14,11 +15,21 @@
             "Guaranteed results"
         ],
         "itemsText": {
-            "1": "With over a decade dedicated to physical training, I have the knowledge and experience necessary to guide your path to success.",
-            "2": "I understand that each individual is unique, so I design training plans tailored to your specific needs and goals.",
-            "3": "My focus is on you in every session. My aim is to provide you with the support and guidance needed to overcome obstacles and maximize your results.",
-            "4": "My commitment is to help you achieve the results you desire. We will work together, setting achievable milestones and measuring your progress along the way."
+            "1": "Over 10 years of professional physical training experience.",
+            "2": "Specifically designed for your needs and goals.",
+            "3": "Individualized focus on you in every session.",
+            "4": "Collaborative work and monitoring of your progress."
         },
         "lastText": "Whether you're looking to lose weight, gain strength, improve your overall fitness, or achieve any other wellness-related goal, I'm here to guide you every step of the way. Don't wait any longer to transform your life! Contact me today, and together we will help you achieve your goals effectively and sustainably."
+    },
+    "pillars": {
+        "title": "The Pillars of JL Training",
+        "subtitle": "THAT WILL LEAD YOU TO YOUR GOALS",
+        "items": [
+            "ADAPTABLE STRENGTH AND ENDURANCE TO YOUR LEVEL",
+            "ATTITUDE AND CONSCIOUS WORK",
+            "DESIRE AND MOTIVATION",
+            "HABIT CHANGES AND CONSISTENCY"
+        ]
     }
 }

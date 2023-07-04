@@ -4,7 +4,7 @@
 .who-is-juani {
   display: grid;
   grid-template-areas: 'img text';
-  gap: 2rem;
+  gap: 10rem;
   color: #ffff;
   margin: 3rem 5rem;
 
@@ -14,21 +14,23 @@
 
     img {
       width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
 
   }
 
   .presentation-text {
-    width: 100%;
+    width: 90%;
+
+    .margin-left{
+      margin-left: 5rem;
+    }
 
     h1 {
       text-align: center;
       margin: 1rem;
       font-family: 'Barlow Semi Condensed', sans-serif;
-    }
-
-    .other-center{
-      text-align: center;
     }
 
     .bold-text{
@@ -39,6 +41,7 @@
     p {
       line-height: 1.5;
       font-size: map-get(variables.$font-sizes, 'subtext');
+      display: inline;
     }
 
   }

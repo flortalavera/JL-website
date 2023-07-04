@@ -15,9 +15,10 @@ export class PresentationComponent {
     private languageService: LanguageService) { }
 
     ngOnInit() {
-      this.languageService.setLanguage('es').subscribe(data => {
-        this.presentation = data.presentation;
-        console.log(this.presentation.greeting)
+      this.languageService.getData().subscribe((data) => {
+        if (data) {
+          this.presentation = data.presentation;
+        }
       });
     }
 

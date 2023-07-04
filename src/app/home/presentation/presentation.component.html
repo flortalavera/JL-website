@@ -6,28 +6,23 @@
     <div class="presentation-text">
         <h1>{{ presentation?.greeting }}</h1>
         <div>
-            <p>{{ presentation?.firstText }}</p><br>
+            <p>{{ presentation?.firstText }}</p><br><br>
+            <p class="margin-left">{{ presentation?.question }}</p>
         </div>
-        <p class="bold-text" ><img src="../../../assets/icons/flecha.png" alt="alcanzar objetivos"> Experiencia
-            comprobada:</p>
-        <p> Con más de una
-            década dedicada al entrenamiento físico, tengo el conocimiento y la experiencia necesarios para guiar tu
-            camino hacia el éxito.</p>
-        <p class="bold-text"><img src="../../../assets/icons/flecha.png" alt="alcanzar objetivos"> Planes
-            personalizados:</p>
-        <p> Entiendo que
-            cada individuo es único, por lo que diseño planes de entrenamiento adaptados a tus necesidades y objetivos
-            específicos.</p>
-        <p class="bold-text"><img src="../../../assets/icons/flecha.png" alt="alcanzar objetivos"> Atención
-            individualizada:</p>
-        <p> Mi enfoque
-            se centra en vos en cada sesión. Mi objetivo es brindarte el apoyo y la orientación necesarios para superar
-            obstáculos y maximizar tus resultados.</p>
-        <p class="bold-text"><img src="../../../assets/icons/flecha.png" alt="alcanzar objetivos"> Resultados
-            garantizados:</p>
-        <p> Mi compromiso
-            es ayudarte a lograr los resultados que deseas. Trabajaremos juntos, marcando hitos alcanzables y midiendo
-            tu progreso en el camino.</p><br>
-            <p>{{ presentation?.lastText }}</p>
+        <br>
+        <p class="bold-text"><img src="../../../assets/icons/flecha.png" alt="alcanzar objetivos"> {{
+            presentation?.items[0] }}:</p>
+        <p> {{ presentation?.itemsText[0] }}</p><br>
+        <p class="bold-text"><img src="../../../assets/icons/flecha.png" alt="alcanzar objetivos"> {{
+            presentation?.items[1] }}:</p>
+        <p> {{ presentation?.itemsText[1] }}</p><br>
+        <p class="bold-text"><img src="../../../assets/icons/flecha.png" alt="alcanzar objetivos"> {{
+            presentation?.items[2] }}:</p>
+        <p> {{ presentation?.itemsText[2] }}</p><br>
+        <p class="bold-text"><img src="../../../assets/icons/flecha.png" alt="alcanzar objetivos"> {{
+            presentation?.items[3] }}:</p>
+        <p> {{ presentation?.itemsText[3] }}</p>
+        <br><br>
+        <p>{{ presentation?.lastText }}</p>
     </div>
 </div>

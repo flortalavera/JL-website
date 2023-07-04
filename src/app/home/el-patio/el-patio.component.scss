@@ -16,6 +16,7 @@ h1 {
 .main-content-el-patio {
     display: grid;
     grid-template-areas: 'video images';
+    padding: 2rem;
 
     .el-patio-video {
         display: flex;
@@ -45,7 +46,6 @@ h1 {
 
     .slider-image {
         background-color: transparent;
-        padding: 1.5rem;
         border-radius: 10px;
 
         @media (max-width: 473px) {
@@ -63,8 +63,6 @@ h1 {
 
 
         .slider-image-content {
-            padding: 1rem;
-            margin-top: 1rem;
             border-radius: 10px;
             display: flex;
             justify-content: center;
@@ -147,6 +145,7 @@ h1 {
 
                     img {
                         max-width: 100%;
+                        height: 28rem;
                     }
                 }
             }

@@ -6,7 +6,8 @@
     ],
     "presentation": {
         "greeting": "Hola! Soy Juani Lagreca Preparador físico y entrenador",
-        "firstText": "Cuento con más de 10 años de experiencia y mi objetivo es ayudarte a alcanzar tus objetivos de manera efectiva y sostenible, brindándote un enfoque personalizado y resultados tangibles. ¿Qué te ofrece mi enfoque de entrenamiento?",
+        "firstText": "Cuento con más de 10 años de experiencia y mi objetivo es ayudarte a alcanzar tus objetivos de manera efectiva y sostenible, brindándote un enfoque personalizado y resultados tangibles.",
+        "question": "¿Qué te ofrece mi enfoque de entrenamiento?",
         "items": [
             "Experiencia comprobada",
             "Planes personalizados",
@@ -14,11 +15,22 @@
             "Resultados garantizados"
         ],
         "itemsText": {
-            "1": "Con más de una década dedicada al entrenamiento físico, tengo el conocimiento y la experiencia necesarios para guiar tu camino hacia el éxito.",
-            "2": "Entiendo que cada individuo es único, por lo que diseño planes de entrenamiento adaptados a tus necesidades y objetivos específicos.",
-            "3": "Mi enfoque se centra en vos en cada sesión. Mi objetivo es brindarte el apoyo y la orientación necesarios para superar obstáculos y maximizar tus resultados.",
-            "4": "Mi compromiso es ayudarte a lograr los resultados que deseas. Trabajaremos juntos, marcando hitos alcanzables y midiendo tu progreso en el camino."
+            "1": "Más de 10 años de entrenamiento físico profesional.",
+            "2": "Diseñados específicamente para tus necesidades y metas.",
+            "3": "Enfoque centrado en ti en cada sesión.",
+            "4": "Trabajo conjunto y seguimiento de tu progreso."
         },
         "lastText": "Ya sea que busques perder peso, ganar fuerza, mejorar tu condición física general o alcanzar cualquier otro objetivo relacionado con el bienestar, estoy acá para guiarte en cada paso del camino. ¡No esperes más para transformar tu vida! Contáctame hoy mismo y juntos lograremos que alcances tus objetivos de forma efectiva y duradera."
+    },
+    "pillars": {
+        "title" : "Los pilares de JL Entrenamientos",
+        "subtitle": "QUE TE LLEVARÁN A TUS OBJETIVOS",
+        "items": [
+            "FUERZA Y RESISTENCIA ADAPTABLES A TU NIVEL",
+            "ACTITUD Y TRABAJO CONSCIENTE",
+            "GANAS Y MOTIVACIÓN",
+            "CAMBIOS DE HÁBITOS Y CONSTANCIA"
+        ]
     }
+
 }
