@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { LanguageService } from 'src/app/common-services/language.service';
 
 @Component({
   selector: 'app-el-patio',
@@ -10,10 +11,19 @@ export class ElPatioComponent {
   palettes: any[] = [];
   currentIndex: number = 0;
   visiblePalettes: any[] = [];
+  elPatio: any;
   
   @ViewChild('video', { static: true }) videoElement!: ElementRef;
 
+  constructor(private languageService: LanguageService) { }
+
   ngOnInit() {
+
+    this.languageService.getData().subscribe((data) => {
+      if (data) {
+        this.elPatio = data.elPatio;
+      }
+    });
 
     this.palettes = [
       { image: "assets/images/el-patio/patio9.jpg" },

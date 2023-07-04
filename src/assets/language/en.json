@@ -31,5 +31,36 @@
             "DESIRE AND MOTIVATION",
             "HABIT CHANGES AND CONSISTENCY"
         ]
+    },
+    "plans": {
+        "title": "Choose the plan that best suits your needs",
+        "planName": [
+            "Distance Plan",
+            "Online Plan",
+            "12 Weeks Program",
+            "Standard In-person Plan",
+            "Premium In-person Plan"
+        ],
+        "items": [
+            "Customized planning.",
+            "Generic planning.",
+            "Personalized attention.",
+            "Semi-personalized attention.",
+            "Explanatory videos.",
+            "24/7 support.",
+            "Remote assistance."
+        ],
+        "button": "Get it now!",
+        "paymentMethods": {
+            "title": "Payment Methods",
+            "items": [
+                "Cash",
+                "Mercado Pago",
+                "Bank Transfer"
+            ]
+        }
+    },
+    "elPatio": {
+        "title": "Discover El Patio: Your Ideal Place to Train"
     }
 }

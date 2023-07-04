@@ -31,6 +31,37 @@
             "GANAS Y MOTIVACIÓN",
             "CAMBIOS DE HÁBITOS Y CONSTANCIA"
         ]
+    },
+    "plans": {
+        "title": "Elegí el plan que más se adapte a tus necesidades",
+        "planName": [
+            "Plan a Distancia",
+            "Plan Online",
+            "12 Weeks Program",
+            "Plan Standad presencial",
+            "Plan Premium presencial"
+        ],
+        "items":[
+            "Planificación personalizada.",
+            "Planificación genérica.",
+            "Atención personalizada.",
+            "Atención semipersonalizada.",
+            "Videos explicativos.",
+            "Atención 24/7.",
+            "Atención a distancia."
+        ],
+        "button": "Pedilo ya!",
+        "paymentMethods": {
+            "title": "Métodos de Pago",
+            "items": [
+                "Efectivo",
+                "Mercado Pago",
+                "Transferencia Bancaria"
+            ]
+        }
+    },
+    "elPatio": {
+        "title": "Descubre El Patio: Tu Lugar Ideal para Entrenar"
     }
 
 }

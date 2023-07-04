@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from 'src/app/common-services/language.service';
 
 @Component({
   selector: 'app-plans',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./plans.component.scss']
 })
 export class PlansComponent {
+  plans: any;
+
+  constructor(private languageService: LanguageService) { }
+
+  ngOnInit() {
+    this.languageService.getData().subscribe((data) => {
+      if (data) {
+        this.plans = data.plans;
+      }
+    });
+  }
 
 }
