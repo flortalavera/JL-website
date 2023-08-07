@@ -14,13 +14,13 @@
                 <div class="arrow-left"></div>
             </div>
             <div class="carousel-container">
-                <ng-container *ngFor="let palette of visiblePalettes; let i = index">
-                    <div class="palette" [class.active]="currentIndex === i">
-                        <img [src]="palette.image" [alt]="palette.title">
+                <ng-container *ngFor="let image of visibleImages; let i = index">
+                    <div class="image" [class.active]="currentIndex === i">
+                        <img [src]="image.image" [alt]="image.title">
                     </div>
                 </ng-container>
             </div>
-            <div class="carousel-nav-right" [ngClass]="{ 'disabled': currentIndex === palettes.length - 1 }"
+            <div class="carousel-nav-right" [ngClass]="{ 'disabled': currentIndex === images.length - 1 }"
                 (click)="next()">
                 <div class="arrow-right"></div>
             </div>

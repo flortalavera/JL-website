@@ -1,0 +1,11 @@
+@mixin responsive-width($max-width, $width) {
+    @media (max-width: $max-width) {
+        width: $width;
+    }
+}
+
+@mixin responsive-height($max-width, $height) {
+    @media (max-width: $max-width) {
+        height: $height;
+    }
+}

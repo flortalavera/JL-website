@@ -3,7 +3,6 @@
 
 * {
     color: #ffff;
-    background-color: black;
 }
 
 nav {
@@ -14,6 +13,7 @@ nav {
     width: 100%;
     z-index: 999;
     justify-content: space-between;
+    background-color: black;
 
     .logo-image {
         width: 60%;
@@ -67,14 +67,22 @@ nav {
     .menu-btn {
         display: none;
         border: none;
+        background-color: black;
     }
 
 }
 
-@media (max-width: 895px) {
+@media (max-width: 1037px) {
 
     nav {
         justify-content: space-between;
+
+        .menu-item{
+            .language ._ngcontent-khr-c33{
+                display: flex;
+                background-color: #ffff;
+            }
+        }
 
         .items-page {
             display: none;
@@ -86,6 +94,5 @@ nav {
             padding-right: 1.8rem;
         }
     }
-
 
 }

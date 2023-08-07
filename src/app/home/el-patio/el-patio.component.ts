@@ -8,9 +8,9 @@ import { LanguageService } from 'src/app/common-services/language.service';
 })
 
 export class ElPatioComponent {
-  palettes: any[] = [];
+  images: any[] = [];
   currentIndex: number = 0;
-  visiblePalettes: any[] = [];
+  visibleImages: any[] = [];
   elPatio: any;
   
   @ViewChild('video', { static: true }) videoElement!: ElementRef;
@@ -25,41 +25,41 @@ export class ElPatioComponent {
       }
     });
 
-    this.palettes = [
-      { image: "assets/images/el-patio/patio9.jpg" },
-      { image: "assets/images/el-patio/patio2.jpg" },
-      { image: "assets/images/el-patio/patio3.jpg" },
-      { image: "assets/images/el-patio/patio4.jpg" },
-      { image: "assets/images/el-patio/patio5.jpg" },
-      { image: "assets/images/el-patio/patio6.jpg" },
-      { image: "assets/images/el-patio/patio7.jpg" },
-      { image: "assets/images/el-patio/patio8.jpg" },
-      { image: "assets/images/el-patio/patio1.jpg" },
-      { image: "assets/images/el-patio/patio10.jpg" },
+    this.images = [
+      { image: "assets/images/el-patio/patio9.jpg", title: "imagen del patio" },
+      { image: "assets/images/el-patio/patio2.jpg", title: "imagen del patio" },
+      { image: "assets/images/el-patio/patio3.jpg", title: "imagen del patio" },
+      { image: "assets/images/el-patio/patio4.jpg", title: "imagen del patio" },
+      { image: "assets/images/el-patio/patio5.jpg", title: "imagen del patio" },
+      { image: "assets/images/el-patio/patio6.jpg", title: "imagen del patio" },
+      { image: "assets/images/el-patio/patio7.jpg", title: "imagen del patio" },
+      { image: "assets/images/el-patio/patio8.jpg", title: "imagen del patio" },
+      { image: "assets/images/el-patio/patio1.jpg", title: "imagen del patio" },
+      { image: "assets/images/el-patio/patio10.jpg", title: "imagen del patio" },
 
     ];
 
-    this.updateVisiblePalettes();
+    this.updateVisibleImages();
   }
 
   previous() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
-      this.updateVisiblePalettes();
+      this.updateVisibleImages();
     }
   }
 
   next() {
-    if (this.currentIndex < this.palettes.length - 1) {
+    if (this.currentIndex < this.images.length - 1) {
       this.currentIndex++;
-      this.updateVisiblePalettes();
+      this.updateVisibleImages();
     }
   }
 
-  updateVisiblePalettes() {
+  updateVisibleImages() {
     const start = this.currentIndex;
     const end = start + 1;
-    this.visiblePalettes = this.palettes.slice(start, end);
+    this.visibleImages = this.images.slice(start, end);
   }
 
   isPlaying = true;

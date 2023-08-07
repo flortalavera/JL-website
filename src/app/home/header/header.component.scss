@@ -1,5 +1,6 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
+@import '../../design-system/_mixins.scss';
 
 .slider-content {
     margin-top: 5rem;
@@ -9,6 +10,9 @@
         left: 0;
         width: 100%;
         height: 86vh;
+
+        @include responsive-height(580px, 75vh);
+
 
         video {
             width: 100%;

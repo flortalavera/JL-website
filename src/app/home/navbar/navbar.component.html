@@ -3,12 +3,22 @@
         <img src="../../../assets/images/LOGO JUANI.png" alt="LOGO JL ENTRENAMIENTOS">
         <h3 (click)="reloadHome()">JL Entrenamientos</h3>
     </div>
-    <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" (click)="showMenuItems()">☰</button>
+    <button class="menu-btn" mat-button [matMenuTriggerFor]="menu" (click)="showMenuItems()">
+        <img src="../../../assets/icons/lista.png" alt="menu opciones pagina">
+    </button>
     <mat-menu #menu="matMenu" class="menu-item">
         <a mat-menu-item href="#about-me">{{ navbarItems[0] }}</a>
         <a mat-menu-item href="#plans">{{ navbarItems[1] }}</a>
         <a mat-menu-item href="#el-patio">EL PATIO</a>
         <a mat-menu-item href="#contact-me">{{ navbarItems[2] }}</a>
+        <div class="language">
+            <a mat-menu-item href="#" (click)="changeLanguage('es')">
+                <img title="Español" src="../../../assets/icons/languages/espana.png" alt="Bandera Espania">
+            </a>
+            <a mat-menu-item href="#" (click)="changeLanguage('en')">
+                <img title="English" src="../../../assets/icons/languages/reino-unido.png" alt="Bandera Inglaterra">
+            </a>
+        </div>
     </mat-menu>
     <div class="items-page">
         <li>
