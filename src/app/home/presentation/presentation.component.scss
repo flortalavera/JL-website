@@ -1,39 +1,71 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
+@import '../../design-system/_mixins.scss';
 
 .who-is-juani {
   display: grid;
   grid-template-areas: 'img text';
-  gap: 10rem;
+  gap: 8rem;
   color: #ffff;
   margin: 3rem 5rem;
+  align-items: center;
+
+  @media (max-width: 1275px) {
+    gap: 5rem;
+  }
+
+  @media (max-width: 1165px) {
+    margin: 3rem;
+  }
+
+  @media (max-width: 1040px) {
+    display: block;
+
+    .presentation-text {
+      width: 100%;
+      padding: 2rem 4rem;
+    }
+
+  }
+
 
   .image-juani {
     display: flex;
     justify-content: space-around;
 
     img {
-      width: 100%;
+      width: 28rem;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+      @include responsive-width(1124px, 25rem);
+      @include responsive-width(508px, 20rem);
     }
 
   }
 
   .presentation-text {
-    width: 90%;
+    width: 100%;
 
-    .margin-left{
-      margin-left: 5rem;
+    @media (max-width: 927px) {
+      padding: 2rem 3rem;
+    }
+
+    @media (max-width: 867px) {
+      padding: 2rem;
+    }
+    
+    @media (max-width: 508px) {
+      padding: 2rem 0;
     }
 
     h1 {
       text-align: center;
-      margin: 1rem;
+      margin: 1rem 0;
       font-family: 'Barlow Semi Condensed', sans-serif;
     }
 
-    .bold-text{
+    .bold-text {
       font-weight: bold;
       display: inline;
     }
@@ -61,50 +93,5 @@
   100% {
     transform: translateX(0);
     opacity: 1;
-  }
-}
-
-@media (max-width: 1124px) {
-  .who-is-juani {
-
-    .image-juani {
-
-      img {
-        width: 80%;
-      }
-
-    }
-  }
-}
-
-@media (max-width: 1040px) {
-  .who-is-juani {
-    display: block;
-
-    .image-juani {
-
-      img {
-        width: 50%;
-      }
-
-    }
-
-    .presentation-text {
-      width: 100%;
-      padding: 2rem 4rem;
-    }
-  }
-}
-
-@media (max-width: 563px) {
-  .who-is-juani {
-
-    .image-juani {
-
-      img {
-        width: 60%;
-      }
-
-    }
   }
 }
