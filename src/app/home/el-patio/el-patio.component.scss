@@ -171,16 +171,6 @@ h1 {
                         height: 30rem;
                     }
 
-                    /*
-                    @media (max-width: 707px) {
-                        flex-basis: 50%;
-                        max-width: 50%;
-                    }
-
-                    @media (max-width: 564px) {
-                        flex-basis: 100%;
-                        max-width: 100%;
-                    }*/
 
                     &.active {
                         opacity: 1;
@@ -207,7 +197,6 @@ h1 {
                     p {
                         padding: 0;
                         margin-left: 1rem;
-                        //color: map-get(variables.$color-palette-billcentrix, 'primary');
                     }
 
                     img {
