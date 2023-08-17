@@ -117,7 +117,7 @@ h1 {
             .arrow-right {
                 width: 0;
                 height: 0;
-                border: solid map-get(variables.$colors, 'brown-medium');
+                border: solid #ffff;
                 ;
                 border-width: 0 5px 5px 0;
                 display: inline-block;

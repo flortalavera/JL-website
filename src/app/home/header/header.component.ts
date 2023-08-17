@@ -10,7 +10,7 @@ export class HeaderComponent {
   @ViewChild('video', { static: true }) videoElement!: ElementRef;
 
   isPlaying = true;
-  buttonImageSrc = '../../../assets/icons/play.png';
+  buttonImageSrc = '../../../assets/icons/pausa.png';
 
   toggleVideo() {
     if (this.videoElement) {
