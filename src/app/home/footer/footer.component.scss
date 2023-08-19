@@ -1,39 +1,35 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
 
-*{
+* {
     background-color: black;
 }
 
-.footer-content{
-    padding-top: 1rem;
+.footer-content {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
 
-    .social-media-img{
+    @media (max-width: 429px) {
+        width: 105%;
+    }
+
+    .social-media-img {
         margin-bottom: 1rem;
 
-        img:first-child{
+        img:first-child {
             margin-right: 1.8rem;
         }
     }
 
-    #copyright{
+    #copyright {
         color: #fff;
-    }
-}
 
-@media (max-width: 429px) {
-    .footer-content{
-        width: 105%;
-    }
-}
-
-@media (max-width: 365px) {
-    .footer-content{
-        #copyright{
-            padding: 0 2rem;
+        p{
+            @media (max-width: 503px) {
+                font-size: 0.6rem;
+            } 
         }
     }
 }

@@ -1,5 +1,6 @@
 @use '../../design-system/_reset';
 @use '../../design-system/_variables';
+@import '../../design-system/_mixins.scss';
 
 @font-face {
     font-family: 'Rustic Printed Stamp';
@@ -29,7 +30,24 @@ h1 {
         padding: 2rem;
         border-radius: 3%;
 
-        h2{
+        @media (max-width: 828px) {
+            flex-basis: calc(40% - 10px);
+        }
+
+        @media (max-width: 553px) {
+            flex-basis: calc(60% - 10px);
+        }
+
+        @media (max-width: 458px) {
+            flex-basis: calc(70% - 10px);
+        }
+
+        @media (max-width: 374px) {
+            flex-basis: calc(80% - 10px);
+        }
+        
+
+        h2 {
             font-family: 'Rustic Printed Stamp', sans-serif;
             font-size: map-get(variables.$font-sizes, 'subtitle');
         }
@@ -71,7 +89,14 @@ h1 {
             transition: background-color 0.3s ease, opacity 0.3s ease;
             box-shadow: -3px -3px 4px rgba(0, 0, 0, 0.11);
 
-            a{
+            @media (max-width: 1184px) {
+                padding: 0.6rem;
+            }
+
+            @include responsive-width(901px, 100%);
+            @include responsive-width(553px, 80%);
+
+            a {
                 color: rgb(63, 62, 62);
                 font-family: 'Barlow Semi Condensed', sans-serif;
             }
@@ -81,36 +106,61 @@ h1 {
             background-color: rgb(72, 68, 68);
             opacity: 0.9;
             border: solid 1.5px #ffff;
-            
-            a{
+
+            a {
                 color: #ffff;
             }
         }
 
     }
 
-    .plan{
+    .plan {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 26rem;
+
+        @include responsive-height(1123px, 28rem);
+        @include responsive-height(1006px, 32rem);
+        @include responsive-height(871px, 34rem);
+        @include responsive-height(553px, 26rem);
+
     }
 
     .payment-methods {
         background: transparent;
-        padding: 2rem 0 0 3rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
+        border: 0.4rem solid #ffffff41;
+
+        @media (max-width: 1439px) {
+            padding: 0;
+        }
+
+        @media (max-width: 553px) {
+            padding: 2rem;
+        }        
 
         h2 {
             color: #ffff;
             font-size: map-get(variables.$font-sizes, 'subtitle');
+
+            @media (max-width: 1239px) {
+                text-align: center;
+            }
         }
 
         .item-method {
             display: flex;
             align-items: flex-end;
+            padding-left: 2rem;
+
+            @media (max-width: 1239px) {
+                flex-direction: column;
+                align-items: center;
+                padding-left: 0;
+            }
 
             p {
                 color: #ffff;
@@ -124,78 +174,7 @@ h1 {
     }
 }
 
-@media (max-width: 1439px) {
 
-    .plans-content {
-        .payment-methods {
-            padding: 0;
-
-            h2 {
-                text-align: left;
-            }
-        }
-    }
-}
-
-@media (max-width: 1239px) {
-
-    .plans-content {
-        .payment-methods {
-            h2 {
-                text-align: center;
-            }
-
-            .item-method {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    }
-}
-
-@media (max-width: 828px) {
-    .plans-content {
-
-        .plan,
-        .payment-methods {
-            flex-basis: calc(40% - 10px);
-        }
-    }
-
-}
-
-@media (max-width: 553px) {
-    .plans-content {
-
-        .plan,
-        .payment-methods {
-            flex-basis: calc(60% - 10px);
-        }
-    }
-
-}
-
-@media (max-width: 458px) {
-    .plans-content {
-
-        .plan,
-        .payment-methods {
-            flex-basis: calc(70% - 10px);
-        }
-    }
-
-}
-
-@media (max-width: 374px) {
-    .plans-content {
-
-        .plan,
-        .payment-methods {
-            flex-basis: calc(80% - 10px);
-        }
-    }
-
-}
 
 @media (min-width: 768px) {
 

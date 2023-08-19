@@ -41,6 +41,8 @@ nav {
             ul {
                 padding: 0 3rem;
                 cursor: pointer;
+                display: flex;
+                align-items: center;
             }
 
             ul:hover {
