@@ -4,6 +4,7 @@ import { HeaderComponent } from './header.component';
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
+  let videoElementSpy: jasmine.Spy;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -15,27 +16,13 @@ describe('HeaderComponent', () => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
+    // Espiamos el método 'play' del elemento de video
+    videoElementSpy = spyOn(component.videoElement.nativeElement, 'play');
   });
 
   it('should create the component', () => {
     expect(component).toBeTruthy();
   });
-
-  /*it('should toggle video playback', () => {
-    const videoElement = component.videoElement.nativeElement;
-    
-    expect(component.isPlaying).toBe(true);
-    expect(component.buttonImageSrc).toContain('pausa');
-
-    videoElement.paused = true;
-    component.toggleVideo();
-    expect(component.isPlaying).toBe(true);
-    expect(component.buttonImageSrc).toContain('pausa');
-
-   videoElement.paused = false;
-    component.toggleVideo();
-    expect(component.isPlaying).toBe(false);
-    expect(component.buttonImageSrc).toContain('play');
-  });*/
-
+  
 });

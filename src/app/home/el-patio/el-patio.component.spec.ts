@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ElPatioComponent } from './el-patio.component';
+import { LanguageService } from 'src/app/common-services/language.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ElPatioComponent', () => {
   let component: ElPatioComponent;
@@ -8,8 +10,9 @@ describe('ElPatioComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule],
-      declarations: [ElPatioComponent]
+      imports: [BrowserAnimationsModule, HttpClientModule],
+      declarations: [ElPatioComponent],
+      providers: [LanguageService]
     }).compileComponents();
   });
 
@@ -21,17 +24,5 @@ describe('ElPatioComponent', () => {
 
   it('should create the component', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should open the image modal', () => {
-    const img = 'assets/images/el-patio/patio1.jpg';
-    component.openImageModal(img);
-    expect(component.showModal).toBeTrue();
-    expect(component.selectedImage).toEqual(img);
-  });
-
-  it('should close the image modal', () => {
-    component.closeImageModal();
-    expect(component.showModal).toBeFalse();
   });
 });

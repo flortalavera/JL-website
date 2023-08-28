@@ -8,15 +8,14 @@ import { LanguageService } from 'src/app/common-services/language.service';
 })
 export class SupportComponent {
   elementToAnimate: any;
-  pillars: any;
+  pillars: { items: string[], title: string, subtitle: string } = { items: [], title: '', subtitle: '' };
 
-  constructor(private el: ElementRef,
-    private languageService: LanguageService) { }
+  constructor(private el: ElementRef, private languageService: LanguageService) {}
 
   ngOnInit() {
     this.elementToAnimate = this.el.nativeElement.querySelector('.icons-section');
     this.languageService.getData().subscribe((data) => {
-      if (data) {
+      if (data && data.pillars) {
         this.pillars = data.pillars;
       }
     });
